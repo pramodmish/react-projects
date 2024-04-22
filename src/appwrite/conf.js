@@ -113,6 +113,10 @@ export class Service {
       return false;
     }
   }
+
+  previerFile(fileId) {
+    return this.bucket.getFilePreview(conf.appWriteBucketId, fileId);
+  }
 }
 
 const service = new Service();
